@@ -9,12 +9,12 @@ function queue(nama, time) {
 }
 
 queue("Jhon", 1500)
-  .then(function (result) {
-    console.log(result);
-    queue("Ed", 2000).then(function (result) {
-      console.log(result);
-      queue("Jane", 500).then(function (result) {
-        console.log(result);
+  .then((res) => {
+    console.log(res);
+    queue("Ed", 2000).then((res) => {
+      console.log(res);
+      queue("Jane", 500).then((res) => {
+        console.log(res);
       });
     });
   })
