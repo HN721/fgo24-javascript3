@@ -24,7 +24,7 @@ console.log(isPalindrom("civic"));
 console.log(isPalindrom("Hosea"));
 function isPalindrom2(str) {
   let result = "";
-  for (let i = 0; i < str.length / 2; i++) {
+  for (let i = 0; i < str.length; i++) {
     result = str[i] + result;
   }
   if (result === str) {
@@ -33,6 +33,7 @@ function isPalindrom2(str) {
     return `${str} bukan palindrom`;
   }
 }
+
 
 console.log(isPalindrom2("civic"));
 
