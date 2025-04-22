@@ -209,25 +209,28 @@ keys()  method yang mengembalikan iterator untuk indeks (index/key) dari elemen-
 */
 
 // 5. Built-in Function : Function
-// 1. Buiilt- in Function : json()
-json();
+// 1. Buiilt- in Function : parseInt()
+//fungsi bawaan JavaScript yang digunakan untuk mengubah (mengurai) string menjadi bilangan bulat (integer)
+parseInt("123"); // 123
+parseInt("123abc"); // 123  → stop setelah angka
+parseInt("abc123"); // NaN  → gagal karena diawali huruf
 
 // 2. Built-in Function : fetch()
+/* Fungsi built-in untuk mengambil data dari server (API).
+ */
 fetch("https://api.example.com/data")
   .then((res) => res.json())
   .then((data) => console.log(data));
 
-/* Fungsi built-in untuk mengambil data dari server (API).
- */
-
 // 3. Built-in function : apply()
+//Digunakan untuk memanggil fungsi dengan nilai this tertentu, dan argumen dalam bentuk array.
+
 function greet(name, age) {
   console.log(`Hello, my name is ${name} and I'm ${age} years old.`);
 }
 
 greet.apply(null, ["Hosea", 24]);
 
-//Digunakan untuk memanggil fungsi dengan nilai this tertentu, dan argumen dalam bentuk array.
 //4. Buit-in function : bind()
 //Mengembalikan fungsi baru dengan nilai this yang ditetapkan.
 const person = {
@@ -241,7 +244,7 @@ const greetFn = person.greet.bind(person);
 greetFn(); // Output: Hi, I'm Hosea
 
 //5. Built-in function : call()
-
+// metode dari function di JavaScript yang digunakan untuk memanggil fungsi dengan this tertentu, dan argumennya dikirim satu per satu
 function greet(name, age) {
   console.log(`Hello, my name is ${name} and I'm ${age} years old.`);
 }
